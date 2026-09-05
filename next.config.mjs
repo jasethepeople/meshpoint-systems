@@ -1,11 +1,8 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  typescript: {
-    ignoreBuildErrors: true,
-  },
-  images: {
-    unoptimized: true,
-  },
-}
+﻿import path from 'path';
 
-export default nextConfig
+/** @type {import('next').NextOpenConfig} */
+const nextConfig = {
+  outputFileTracingRoot: path.join(process.cwd()),
+};
+
+export default nextConfig;
