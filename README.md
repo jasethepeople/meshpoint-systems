@@ -1,35 +1,41 @@
-# v0-katachi-ho
+# meshpoint-systems
 
-This is a [Next.js](https://nextjs.org) project bootstrapped with [v0](https://v0.app).
+Next.js marketing/storefront site bootstrapped with v0 (v0 project "v0-katachi-ho", linked at https://v0.app/chat/projects/prj_3Ne6KSXjPC4MyPIajwhoPYrpcvKj).
 
-## Built with v0
+## Features
 
-This repository is linked to a [v0](https://v0.app) project. You can continue developing by visiting the link below -- start new chats to make changes, and v0 will push commits directly to this repo. Every merge to `main` will automatically deploy.
+- **Storefront sections** — hero, featured products, collection strip, materials section, newsletter signup, footer (`components/`)
+- **Product browsing** — product cards with quick-look modal (`product-card.tsx`, `quick-look-modal.tsx`)
+- **Motion & presentation** — animated text, parallax images, blur panels, scroll reveal effects (`animated-text.tsx`, `parallax-image.tsx`, `reveal.tsx`)
+- **Theming** — light/dark theme provider (`theme-provider.tsx`); mobile detection and toast hooks (`hooks/`)
+- Product imagery in `public/` (sofas, chairs, and related lifestyle renders) suggests a furniture/home-goods catalog presentation
 
-[Continue working on v0 →](https://v0.app/chat/projects/prj_3Ne6KSXjPC4MyPIajwhoPYrpcvKj)
+## Tech stack
 
-## Getting Started
+Next.js 15, React 19, TypeScript, Tailwind CSS 4, Radix UI primitives, Framer Motion, shadcn-style `components/ui` (per `components.json`), Vercel Analytics, pnpm.
 
-First, run the development server:
+## Getting started
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+npm run dev     # next dev → http://localhost:3000
+npm run build   # next build
+npm start       # next start
+npm run lint    # eslint .
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Edit `app/page.tsx` to change the page; it auto-updates in dev.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project structure
 
-## Learn More
+```
+app/              # layout.tsx, page.tsx, globals.css (Next.js App Router)
+components/       # page sections + ui/ primitives
+hooks/            # use-mobile, use-toast
+lib/              # utils.ts
+public/           # product/lifestyle imagery, icons, video
+components.json   # shadcn/ui config
+```
 
-To learn more, take a look at the following resources:
+## Status
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-- [v0 Documentation](https://v0.app/docs) - learn about v0 and how to use it.
-
-<a href="https://v0.app/chat/api/kiro/clone/jasonclarkagain/v0-katachi-ho" alt="Open in Kiro"><img src="https://pdgvvgmkdvyeydso.public.blob.vercel-storage.com/open%20in%20kiro.svg?sanitize=true" /></a>
+Real project. A v0-generated storefront site; the package name is still the v0 default `my-v0-project`. Continues to be developed through the linked v0 project, which pushes to this repo.
